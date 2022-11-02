@@ -18,8 +18,14 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/burger.scss";
+@import "./blocks/main-block.scss";
+@import "./blocks/heading.scss";
+@import "./blocks/journey.scss";
+// @import "blocks/modal";
 
 // ---------------------------------
 

@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Круизы в Антарктику">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon//site.webmanifest" crossorigin="use-credentials">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Круизы в Антарктику</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="burger burger--no-js">
+        <div class="container header__container burger__container">
+          <div class="logo burger__logo">
+            <a class="logo__link">
+              <svg class="logo__icon burger__icon" width="70" height="38" viewBox="0 0 70 38"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
+            </a>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
+          <button class="header__button burger__button" type="button">
+            <span class="visually-hidden">
+              Показать/скрыть бургер меню
+            </span>
           </button>
+          <nav class="navigation burger__wrapper">
+            <ul class="navigation__list burger__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#advantages">
+                  Преимущества
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#journey">
+                  Направления
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#trips">
+                  Ближайшие круизы
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#contacts">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="main-block">
+        <div class="container">
+          <picture>
+            <source type="image/webp" srcset="./img/promo-bg.webp, ./img/promo-bg@2x.webp 2x" width="1366" height="844">
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
+            <img class="main-block__background" loading="lazy" src="./img/promo-bg.jpg" srcset="./img/promo-bg@2x.jpg"
+              alt="Пейзаж с айсбергами" width="1366" height="844">
+          </picture>
+          <div class="main-block__text">
+            <h1 class="main-block__heading">Круизы в&nbsp;Антарктику</h1>
+            <p class="main-block__subheadeing">Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <section class="journey" id="journey">
+        <div class="container journey__container">
+          <div class="journey__description">
+            <h2 class="heading journey__heading">Путешествие на&nbsp;край Земли</h2>
+            <p class="journey__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным
+              миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные
+              айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+          </div>
+          <picture>
+            <source type="image/webp" srcset="./img/about-bg.webp, ./img/about-bg@2x.webp 2x" width="560" height="301">
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+            <img class="journey__background" loading="lazy" src="./img/about-bg.jpg" srcset="./img/about-bg@2x.jpg"
+              alt="Пейзаж с айсбергами" width="560" height="301">
+          </picture>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
