@@ -40,6 +40,8 @@
 
   @include vp-767 {
     padding: 29px 25px 0;
+    max-width: 270px;
+    min-width: 270px;
   }
 }
 
@@ -113,7 +115,7 @@
   display: flex;
   flex-direction: column;
   min-height: 322px;
-  max-height: 386px;
+  max-height: 350px;
   overflow-y: scroll;
 }
 
@@ -160,7 +162,7 @@
   }
 
   &:focus {
-    outline: 2px solid #e12323;
+    outline: 2px solid rgb(236, 61, 30);
     outline-offset: -2px;
   }
 }

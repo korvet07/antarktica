@@ -1,10 +1,32 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-
+import {createMap, mapContainer} from './vendor/yandex-map';
 // ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
+const burgerContainer = document.querySelector('.burger');
+const burgerWrapper = document.querySelector('.burger__wrapper');
+const burgerBtn = document.querySelector('.burger__button');
+const header = document.querySelector('.header__container');
+const mainBlock = document.querySelector('.main-block');
 
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (burgerBtn) {
+    initBurger();
+    breakpointChecker();
+
+  }
+
+  if (mapContainer) {
+    initMap();
+  }
+
+  if (mainBlock) {
+    setHeaderHeight();
+  }
+  if (burgerContainer) {
+    burgerContainer.classList.remove('burger--no-js');
+  }
   // Utils
   // ---------------------------------
 
@@ -19,6 +41,49 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
+
+window.addEventListener('resize', () => setHeaderHeight());
+
+const initBurger = () => {
+  burgerContainer.classList.add('burger--close');
+  burgerBtn.addEventListener('click', toggleBurger);
+};
+
+const toggleBurger = () => {
+  burgerContainer.classList.toggle('burger--close');
+  burgerContainer.classList.toggle('burger--open');
+  document.body.classList.toggle('scroll-lock');
+};
+
+const initMap = () => {
+  mapContainer.innerHTML = '';
+  createMap();
+};
+
+
+const setHeaderHeight = () => {
+  let headerHeight = header.offsetHeight;
+  mainBlock.style.setProperty('--headerHeight', (headerHeight + 38) + 'px');
+  mainBlock.style.setProperty('--padding-top', (headerHeight + 194) + 'px');
+};
+
+const burgerClickHandler = (e) => {
+  if (e.target.classList.contains('burger__wrapper')) {
+    toggleBurger();
+  }
+  if (e.target.classList.contains('navigation__link')) {
+    toggleBurger();
+  }
+};
+
+const breakpoint = window.matchMedia('(min-width:768px)');
+const breakpointChecker = () => {
+  if (breakpoint.matches) {
+    burgerBtn.removeEventListener('click', toggleBurger);
+  } else {
+    burgerWrapper.addEventListener('click', (e) => burgerClickHandler(e));
+  }
+};
 
 // ---------------------------------
 

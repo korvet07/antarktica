@@ -43,6 +43,7 @@
     }
 
     & .burger__list {
+      overflow: hidden;
       flex-direction: column;
       align-items: center;
     }
@@ -53,6 +54,10 @@
   top: 0;
   left: 0;
   transition: $trans-default;
+}
+
+.burger__logo {
+  margin-right: 20px;
 }
 
 .burger--close {
