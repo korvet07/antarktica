@@ -7,33 +7,6 @@
   background-color: $color-tangaroa;
   transition: box-shadow $trans-default;
 
-  &:hover {
-    box-shadow: 0 4px 35px $color-tangaroa-form-opacity;
-
-    & .card__heading {
-      z-index: -1;
-    }
-
-    & .card__background {
-      top: 0;
-      left: 0;
-    }
-
-    & .card__image {
-      opacity: 0;
-      z-index: -1;
-    }
-
-    & .card__content {
-      position: relative;
-    }
-
-    & .card__button {
-      position: relative;
-      z-index: 1;
-    }
-  }
-
   @include vp-1023 {
     padding: 29px 35px 0;
   }
@@ -44,6 +17,34 @@
     min-width: 270px;
   }
 }
+
+.card:hover {
+  box-shadow: 0 4px 35px $color-tangaroa-form-opacity;
+
+  & .card__heading {
+    z-index: -1;
+  }
+
+  & .card__background {
+    top: 0;
+    left: 0;
+  }
+
+  & .card__image {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  & .card__content {
+    position: relative;
+  }
+
+  & .card__button {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 
 .card:has(.card__button:focus) {
   .card__heading {
