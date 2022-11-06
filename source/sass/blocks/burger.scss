@@ -153,3 +153,9 @@
     }
   }
 }
+
+.burger--no-js .burger__list {
+  @include vp-767 {
+    margin: 30px auto;
+  }
+}

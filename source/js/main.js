@@ -6,9 +6,6 @@ import {createMap, mapContainer} from './vendor/yandex-map';
 const burgerContainer = document.querySelector('.burger');
 const burgerWrapper = document.querySelector('.burger__wrapper');
 const burgerBtn = document.querySelector('.burger__button');
-const header = document.querySelector('.header__container');
-const mainBlock = document.querySelector('.main-block');
-
 
 window.addEventListener('DOMContentLoaded', () => {
   if (burgerBtn) {
@@ -21,9 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
   }
 
-  if (mainBlock) {
-    setHeaderHeight();
-  }
   if (burgerContainer) {
     burgerContainer.classList.remove('burger--no-js');
   }
@@ -42,8 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-window.addEventListener('resize', () => setHeaderHeight());
-
 const initBurger = () => {
   burgerContainer.classList.add('burger--close');
   burgerBtn.addEventListener('click', toggleBurger);
@@ -58,13 +50,6 @@ const toggleBurger = () => {
 const initMap = () => {
   mapContainer.innerHTML = '';
   createMap();
-};
-
-
-const setHeaderHeight = () => {
-  let headerHeight = header.offsetHeight;
-  mainBlock.style.setProperty('--headerHeight', (headerHeight + 38) + 'px');
-  mainBlock.style.setProperty('--padding-top', (headerHeight + 194) + 'px');
 };
 
 const burgerClickHandler = (e) => {
