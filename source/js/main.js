@@ -6,21 +6,26 @@ import {createMap, mapContainer} from './vendor/yandex-map';
 const burgerContainer = document.querySelector('.burger');
 const burgerWrapper = document.querySelector('.burger__wrapper');
 const burgerBtn = document.querySelector('.burger__button');
+const header = document.querySelector('.header__container');
+const mainBlock = document.querySelector('.main-block');
 
 window.addEventListener('DOMContentLoaded', () => {
   if (burgerBtn) {
     initBurger();
     breakpointChecker();
+  }
 
+  if (mainBlock) {
+    setHeaderHeight();
   }
 
   if (mapContainer) {
     initMap();
   }
 
-  if (burgerContainer) {
-    burgerContainer.classList.remove('burger--no-js');
-  }
+  window.addEventListener('resize', () => setHeaderHeight());
+
+
   // Utils
   // ---------------------------------
 
@@ -33,8 +38,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    if (burgerContainer) {
+      burgerContainer.classList.remove('burger--no-js');
+    }
   });
 });
+
 
 const initBurger = () => {
   burgerContainer.classList.add('burger--close');
@@ -59,6 +68,12 @@ const burgerClickHandler = (e) => {
   if (e.target.classList.contains('navigation__link')) {
     toggleBurger();
   }
+};
+
+const setHeaderHeight = () => {
+  let headerHeight = header.offsetHeight;
+  mainBlock.style.setProperty('--headerHeight', (headerHeight + 38) + 'px');
+  mainBlock.style.setProperty('--padding-top', (headerHeight + 194) + 'px');
 };
 
 const breakpoint = window.matchMedia('(min-width:768px)');
