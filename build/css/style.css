@@ -1896,7 +1896,6 @@ html {
 
   .burger--close .burger__button {
     display: block;
-    cursor: pointer;
   }
 
   .burger--open {
@@ -1947,7 +1946,6 @@ html {
     height: 14px;
     margin-top: 0;
     z-index: 2;
-    cursor: pointer;
   }
 
   .burger--open .burger__button::after {

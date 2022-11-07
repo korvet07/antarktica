@@ -81,7 +81,6 @@
 
     .burger__button {
       display: block;
-      cursor: pointer;
     }
   }
 }
@@ -120,7 +119,6 @@
       height: 14px;
       margin-top: 0;
       z-index: 2;
-      cursor: pointer;
 
       &::after {
         top: 50%;
