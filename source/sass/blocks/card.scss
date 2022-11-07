@@ -104,7 +104,7 @@
   }
 }
 
-.card__subheading {
+.card__content p {
   margin: 0;
   margin-bottom: 13px;
   font-size: 18px;
@@ -124,24 +124,24 @@
   display: none;
 }
 
-.card__text {
+.card__content dl {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
 }
 
-.card__name {
+.card__content dt {
   margin-bottom: 1px;
   font-weight: 500;
 }
 
-.card__description {
+.card__content dd {
   margin: 0;
   font-weight: 400;
   color: $color-quartz;
 }
 
-.card__description:not(:last-of-type) {
+.card__content dd:not(:last-of-type) {
   margin-bottom: 11px;
 }
 

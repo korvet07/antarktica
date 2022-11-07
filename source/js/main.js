@@ -12,7 +12,7 @@ const mainBlock = document.querySelector('.main-block');
 window.addEventListener('DOMContentLoaded', () => {
   if (burgerBtn) {
     initBurger();
-    breakpointChecker();
+    checkBreakpointBurger();
   }
 
   if (mainBlock) {
@@ -77,7 +77,7 @@ const setHeaderHeight = () => {
 };
 
 const breakpoint = window.matchMedia('(min-width:768px)');
-const breakpointChecker = () => {
+const checkBreakpointBurger = () => {
   if (breakpoint.matches) {
     burgerBtn.removeEventListener('click', toggleBurger);
   } else {

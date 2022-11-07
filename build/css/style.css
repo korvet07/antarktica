@@ -898,7 +898,7 @@ html {
   background-color: #f9fbfd;
 }
 
-.advantages__subheading {
+.advantages__item h3 {
   position: relative;
   margin: 0;
   margin-bottom: 8px;
@@ -910,11 +910,11 @@ html {
   color: #011c40;
 }
 
-.advantages__subheading br {
+.advantages__item > h3 br {
   display: none;
 }
 
-.advantages__subheading--liner::before {
+.advantages__item:first-child h3::before {
   position: absolute;
   content: "";
   width: 27px;
@@ -925,7 +925,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.advantages__subheading--all-inclusive::before {
+.advantages__item:nth-child(2n) h3::before {
   position: absolute;
   content: "";
   width: 38px;
@@ -936,7 +936,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.advantages__subheading--trip::before {
+.advantages__item:last-child h3::before {
   position: absolute;
   content: "";
   width: 44px;
@@ -947,7 +947,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.advantages__description {
+.advantages__item p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
@@ -1065,7 +1065,7 @@ html {
   font-weight: 500;
 }
 
-.card__subheading {
+.card__content p {
   margin: 0;
   margin-bottom: 13px;
   font-size: 18px;
@@ -1090,24 +1090,24 @@ html {
   display: none;
 }
 
-.card__text {
+.card__content dl {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
 }
 
-.card__name {
+.card__content dt {
   margin-bottom: 1px;
   font-weight: 500;
 }
 
-.card__description {
+.card__content dd {
   margin: 0;
   font-weight: 400;
   color: #d8d8d9;
 }
 
-.card__description:not(:last-of-type) {
+.card__content dd:not(:last-of-type) {
   margin-bottom: 11px;
 }
 
@@ -1609,25 +1609,29 @@ html {
     padding: 26px 16px 20px 20px;
   }
 
-  .advantages__subheading {
+  .advantages__item h3 {
     padding-top: 45px;
     line-height: 25px;
   }
 
-  .advantages__subheading br {
+  .advantages__item > h3 br {
     display: block;
   }
 
-  .advantages__subheading--liner::before {
+  .advantages__item:first-child h3::before {
     width: 21px;
   }
 
-  .advantages__subheading--all-inclusive::before {
+  .advantages__item:nth-child(2n) h3::before {
     width: 27px;
   }
 
-  .advantages__subheading--trip::before {
+  .advantages__item:last-child h3::before {
     width: 36px;
+  }
+
+  .advantages__item:last-child p {
+    padding-top: 10px;
   }
 
   .catalog {
@@ -2060,8 +2064,12 @@ html {
     padding-left: 20px;
   }
 
-  .advantages__subheading {
+  .advantages__item h3 {
     padding-right: 50px;
+  }
+
+  .advantages__item:last-child p {
+    padding-top: 0;
   }
 
   .catalog {

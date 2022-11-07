@@ -70,7 +70,7 @@
   }
 }
 
-.advantages__subheading {
+.advantages__item h3 {
   position: relative;
   margin: 0;
   margin-bottom: 8px;
@@ -88,7 +88,7 @@
   }
 }
 
-.advantages__subheading br {
+.advantages__item > h3 br {
   display: none;
 
   @include vp-1023 {
@@ -96,7 +96,7 @@
   }
 }
 
-.advantages__subheading--liner::before {
+.advantages__item:first-child h3::before {
   @include pseudo(27px, 32px);
 
   top: 0;
@@ -109,7 +109,7 @@
   }
 }
 
-.advantages__subheading--all-inclusive::before {
+.advantages__item:nth-child(2n) h3::before {
   @include pseudo(38px, 32px);
 
   top: 0;
@@ -122,7 +122,7 @@
   }
 }
 
-.advantages__subheading--trip::before {
+.advantages__item:last-child h3::before {
   @include pseudo(44px, 32px);
 
   top: 0;
@@ -135,8 +135,18 @@
   }
 }
 
-.advantages__description {
+.advantages__item p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
+}
+
+.advantages__item:last-child p {
+  @include vp-1023 {
+    padding-top: 10px;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+  }
 }
