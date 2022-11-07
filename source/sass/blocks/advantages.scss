@@ -57,7 +57,7 @@
   }
 }
 
-.advantages__item {
+.advantages__list li {
   padding: 30px 30px 50px;
   background-color: $color-alice-blue;
 
@@ -70,7 +70,7 @@
   }
 }
 
-.advantages__item h3 {
+.advantages__list > li h3 {
   position: relative;
   margin: 0;
   margin-bottom: 8px;
@@ -86,17 +86,18 @@
   @include vp-767 {
     padding-right: 50px;
   }
-}
 
-.advantages__item > h3 br {
-  display: none;
+  br {
+    display: none;
 
-  @include vp-1023 {
-    display: block;
+    @include vp-1023 {
+      display: block;
+    }
   }
 }
 
-.advantages__item:first-child h3::before {
+
+.advantages__list > li:first-child h3::before {
   @include pseudo(27px, 32px);
 
   top: 0;
@@ -109,7 +110,7 @@
   }
 }
 
-.advantages__item:nth-child(2n) h3::before {
+.advantages__list > li:nth-child(2n) h3::before {
   @include pseudo(38px, 32px);
 
   top: 0;
@@ -122,7 +123,7 @@
   }
 }
 
-.advantages__item:last-child h3::before {
+.advantages__list > li:last-child h3::before {
   @include pseudo(44px, 32px);
 
   top: 0;
@@ -135,13 +136,13 @@
   }
 }
 
-.advantages__item p {
+.advantages__list > li p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
 }
 
-.advantages__item:last-child p {
+.advantages__list > li:last-child p {
   @include vp-1023 {
     padding-top: 10px;
   }

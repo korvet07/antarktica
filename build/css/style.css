@@ -893,12 +893,12 @@ html {
   color: #011c40;
 }
 
-.advantages__item {
+.advantages__list li {
   padding: 30px 30px 50px;
   background-color: #f9fbfd;
 }
 
-.advantages__item h3 {
+.advantages__list > li h3 {
   position: relative;
   margin: 0;
   margin-bottom: 8px;
@@ -910,11 +910,11 @@ html {
   color: #011c40;
 }
 
-.advantages__item > h3 br {
+.advantages__list > li h3 br {
   display: none;
 }
 
-.advantages__item:first-child h3::before {
+.advantages__list > li:first-child h3::before {
   position: absolute;
   content: "";
   width: 27px;
@@ -925,7 +925,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.advantages__item:nth-child(2n) h3::before {
+.advantages__list > li:nth-child(2n) h3::before {
   position: absolute;
   content: "";
   width: 38px;
@@ -936,7 +936,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.advantages__item:last-child h3::before {
+.advantages__list > li:last-child h3::before {
   position: absolute;
   content: "";
   width: 44px;
@@ -947,7 +947,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.advantages__item p {
+.advantages__list > li p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
@@ -1605,32 +1605,32 @@ html {
     gap: 30px;
   }
 
-  .advantages__item {
+  .advantages__list li {
     padding: 26px 16px 20px 20px;
   }
 
-  .advantages__item h3 {
+  .advantages__list > li h3 {
     padding-top: 45px;
     line-height: 25px;
   }
 
-  .advantages__item > h3 br {
+  .advantages__list > li h3 br {
     display: block;
   }
 
-  .advantages__item:first-child h3::before {
+  .advantages__list > li:first-child h3::before {
     width: 21px;
   }
 
-  .advantages__item:nth-child(2n) h3::before {
+  .advantages__list > li:nth-child(2n) h3::before {
     width: 27px;
   }
 
-  .advantages__item:last-child h3::before {
+  .advantages__list > li:last-child h3::before {
     width: 36px;
   }
 
-  .advantages__item:last-child p {
+  .advantages__list > li:last-child p {
     padding-top: 10px;
   }
 
@@ -2060,15 +2060,15 @@ html {
     grid-template-columns: 1fr;
   }
 
-  .advantages__item {
+  .advantages__list li {
     padding-left: 20px;
   }
 
-  .advantages__item h3 {
+  .advantages__list > li h3 {
     padding-right: 50px;
   }
 
-  .advantages__item:last-child p {
+  .advantages__list > li:last-child p {
     padding-top: 0;
   }
 
