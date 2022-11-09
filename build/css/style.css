@@ -834,6 +834,8 @@ html {
 .journey__description {
   max-width: 512px;
   padding-top: 56px;
+  -ms-flex-negative: 2;
+  flex-shrink: 2;
 }
 
 .journey__heading {
@@ -1195,6 +1197,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   max-width: 403px;
   padding: 44px 50px 50px;
   -webkit-box-orient: vertical;
@@ -1501,6 +1505,16 @@ html {
   }
 }
 
+@media (max-width: 1300px) {
+  .booking__heading {
+    margin-right: 50px;
+  }
+
+  .booking__text {
+    padding-right: 50px;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 45px;
@@ -1643,6 +1657,10 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .catalog__item {
+    max-width: 330px;
+  }
+
   .card {
     padding: 29px 35px 0;
   }
@@ -1680,6 +1698,7 @@ html {
   }
 
   .booking__heading {
+    margin-right: 0;
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
@@ -1983,6 +2002,7 @@ html {
   }
 
   .burger--open .burger__list {
+    overflow: auto;
     margin-left: 35px;
     height: 102vh;
     padding: 87px 25px;
@@ -2083,9 +2103,14 @@ html {
     grid-template-columns: 1fr;
   }
 
+  .catalog__item {
+    max-width: 430px;
+    width: 100%;
+  }
+
   .card {
     padding: 29px 25px 0;
-    max-width: 270px;
+    max-width: 430px;
     min-width: 270px;
   }
 

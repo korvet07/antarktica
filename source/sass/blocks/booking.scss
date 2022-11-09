@@ -80,7 +80,12 @@
 
   @include fonts(40px, 29px, 700, $color-tangaroa);
 
+  @media (max-width: 1300px) {
+    margin-right: 50px;
+  }
+
   @include vp-1023 {
+    margin-right: 0;
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
@@ -98,6 +103,10 @@
   padding-right: 250px;
   line-height: 27px;
   color: $color-tangaroa;
+
+  @media (max-width: 1300px) {
+    padding-right: 50px;
+  }
 
   @include vp-1023 {
     max-width: 352px;

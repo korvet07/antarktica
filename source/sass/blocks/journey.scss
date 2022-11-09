@@ -27,6 +27,7 @@
 .journey__description {
   max-width: 512px;
   padding-top: 56px;
+  flex-shrink: 2;
 
   @include vp-1023 {
     max-width: 324px;

@@ -1,5 +1,6 @@
 .form {
   display: flex;
+  flex-shrink: 0;
   max-width: 403px;
   padding: 44px 50px 50px;
   flex-direction: column;
