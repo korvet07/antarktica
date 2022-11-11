@@ -24,4 +24,9 @@ const createMap = () => {
     myMap.geoObjects.add(myPlacemark);
   }
 };
-export { createMap, mapContainer };
+const initMap = () => {
+  mapContainer.innerHTML = '';
+  createMap();
+};
+
+export { initMap, mapContainer };

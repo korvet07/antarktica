@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {createMap, mapContainer} from './vendor/yandex-map';
+import {initMap, mapContainer} from './vendor/yandex-map';
 // ---------------------------------
 
 const burgerContainer = document.querySelector('.burger');
@@ -54,11 +54,6 @@ const toggleBurger = () => {
   burgerContainer.classList.toggle('burger--close');
   burgerContainer.classList.toggle('burger--open');
   document.body.classList.toggle('scroll-lock');
-};
-
-const initMap = () => {
-  mapContainer.innerHTML = '';
-  createMap();
 };
 
 const burgerClickHandler = (e) => {
