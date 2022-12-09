@@ -1003,8 +1003,7 @@ html {
 }
 
 .card:hover .card__image {
-  opacity: 0;
-  z-index: -1;
+  opacity: 0.3;
 }
 
 .card:hover .card__content {
